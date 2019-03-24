@@ -1,10 +1,7 @@
 
 
 ### Running MDF examples
-
-1. Download MDF package from [01.org](https://01.org/c-for-media-development-package/downloads)
-
-2. instantiate docker ubuntu:16.04
+1. instantiate docker ubuntu:16.04
 ```
 container=ubuntu:16.04
 
@@ -20,10 +17,20 @@ sudo docker run \
     -w /workspace \
     -it ${container} bash
 ```
+2. install other dependencies
+```
+apt-get update && \
+apt-get install -y vim git curl wget \
+                   libpciaccess-dev \
+                   build-essential \
+                   cmake qtcreator
+```
+
+2. Download MDF package from [01.org](https://01.org/c-for-media-development-package/downloads)
 
 3. Unzip downloaded package into ```/workspace/linux-c-for-media-dev```
 
-4. install MDF dependencies
+4. install MDF
 ```
 cd /workspace/linux-c-for-media-dev/drivers
 ./install.sh
@@ -38,11 +45,7 @@ dpkg -L igc
 export LIBVA_DRIVERS_PATH=/usr/lib/x86_64-linux-gnu/dri
 export LIBVA_DRIVER_NAME=iHD
 ```
-5. install other dependencies
-```
-apt-get update && \
-apt-get install -y vim git curl wget libpciaccess-dev build-essential cmake
-```
+
 6. build and run examples
 ```
 cd /workspace/linux-c-for-media-dev/examples
