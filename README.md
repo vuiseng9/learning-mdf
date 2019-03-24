@@ -23,7 +23,8 @@ apt-get update && \
 apt-get install -y vim git curl wget \
                    libpciaccess-dev \
                    build-essential \
-                   cmake qtcreator
+                   cmake qtcreator \
+                   qtdeclarative5-dev 
 ```
 
 2. Download MDF package from [01.org](https://01.org/c-for-media-development-package/downloads)
