@@ -40,7 +40,8 @@ export LIBVA_DRIVER_NAME=iHD
 ```
 5. install other dependencies
 ```
-apt-get update && apt-get -y install vim git curl wget libpciaccess-dev build-essential
+apt-get update && \
+apt-get install -y vim git curl wget libpciaccess-dev build-essential cmake
 ```
 6. build and run examples
 ```
